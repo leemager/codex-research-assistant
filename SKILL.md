@@ -1,5 +1,5 @@
 ---
-name: research-rigour-starter-kit
+name: codex-research-assistant
 description: Help academic researchers turn vague research goals into reproducible, rigorous Codex projects with fit-for-purpose workflows, evals, provenance, audit trails, environments, skills, subagents, automations, UIs, and research artifacts. Use when a researcher wants help setting up, improving, auditing, evaluating, or automating a research project in Codex, especially if they are non-technical or unsure what to ask for.
 ---
 
