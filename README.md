@@ -45,6 +45,111 @@ It tells Codex to act as a technical research engineer and rigour assistant. In 
 - turn repeated workflows into custom skills
 - suggest subagents, worktrees, automations, and `codex exec` when they fit the job
 
+## How To Use This Starter Pack
+
+The only file you really need is [`SKILL.md`](SKILL.md). The basic idea is:
+
+1. Create a new folder for your research project.
+2. Copy `SKILL.md` into that folder.
+3. Open that folder as your Codex workspace.
+4. Ask Codex to help you set up the project.
+
+Codex works on a folder, not on an abstract idea. That folder is the workspace where it can read files, create scripts, organise sources, write notes, run checks, and save outputs. For a new research project, make a fresh folder first, even if it only contains `SKILL.md` at the beginning.
+
+### Option 1: Codex App, Recommended
+
+Use the desktop app if you are new to Codex. It gives you a clear project picker, local threads, review tools, and a simpler interface than the terminal.
+
+1. Install the Codex app from the official OpenAI docs:
+   - [Mac app downloads, Apple Silicon and Intel](https://developers.openai.com/codex/app#getting-started)
+   - [Windows app download](https://developers.openai.com/codex/app#getting-started)
+2. Create a new folder for your project. For example:
+   - `my-interview-study`
+   - `systematic-review-project`
+   - `survey-analysis`
+3. Copy this starter pack's `SKILL.md` file into that new folder.
+4. Open the Codex app, sign in, and choose the new folder as your project.
+5. Make sure Codex is working locally in that project folder.
+6. Send a first message like:
+
+```text
+Please read SKILL.md and use it as your instructions for helping me set up this research project. Start by asking me the key questions you need to understand my project, then suggest a simple first project structure.
+```
+
+After that, you can add your PDFs, notes, spreadsheets, interview files, data exports, or draft writing to the same folder and ask Codex to help organise, check, analyse, or transform them.
+
+### Option 2: Visual Studio Code With The Codex Extension
+
+Use this route if you already use Visual Studio Code or want to see and edit the project files yourself while Codex works.
+
+1. Install [Visual Studio Code](https://code.visualstudio.com/) if you do not already have it.
+2. Install the official [Codex extension from the Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=openai.chatgpt). OpenAI's [Codex IDE extension docs](https://developers.openai.com/codex/ide) have more setup details.
+3. Create a new project folder on your computer.
+4. Copy `SKILL.md` into that folder.
+5. Open the folder in VS Code with **File > Open Folder**.
+6. Open the Codex panel in VS Code and sign in.
+7. Ask Codex:
+
+```text
+Please read SKILL.md in this workspace and follow it as the research assistant skill for this project. First, interview me about the project and then help me create the initial project structure.
+```
+
+The important detail is that VS Code must have the project folder open. If you only open an individual file, Codex will not have the full workspace it needs.
+
+### Option 3: Pure CLI
+
+Use the CLI if you are comfortable opening a terminal, or if someone technical is helping you set things up.
+
+1. Install the Codex CLI using the official [Codex CLI docs](https://developers.openai.com/codex/cli). The OpenAI quickstart currently lists:
+
+```bash
+npm install -g @openai/codex
+```
+
+or, on macOS with Homebrew:
+
+```bash
+brew install codex
+```
+
+2. Create a new project folder:
+
+```bash
+mkdir my-research-project
+cd my-research-project
+```
+
+3. Copy `SKILL.md` into that folder.
+4. Start Codex from inside the folder:
+
+```bash
+codex
+```
+
+5. Sign in when prompted, then ask:
+
+```text
+Please read SKILL.md and use it as your instructions for this research project. Start by asking me what the project is about, what materials I have, what outputs I need, and what quality or rigour concerns matter most.
+```
+
+Starting Codex from inside the project folder matters because the CLI treats the current folder as the workspace.
+
+### What To Do Next
+
+Once Codex has read the skill, you do not need to know the technical vocabulary in advance. Describe your project in normal research language. For example:
+
+```text
+I am doing a literature review on local climate adaptation policies. I have about 80 PDFs and need a transparent way to extract study details, track inclusion decisions, and produce an evidence table.
+```
+
+or:
+
+```text
+I have interview transcripts and want help creating a rigorous coding workflow with audit trails, codebook versions, and a way to compare coded excerpts.
+```
+
+Codex should then help you decide what to create first: folders, a source manifest, a data dictionary, scripts, review spreadsheets, a local review interface, analysis notebooks, or project-specific instructions.
+
 ## Codex's main superpower
 
 Codex is powerful because it combines two things that are usually separate:
